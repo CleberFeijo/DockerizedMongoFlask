@@ -25,6 +25,7 @@ Depois de instalado basta colocar o código no diretorio app no arquivo app.py e
 Para acessar a api de extração de artigos:
 
     http://localhost:80/extrair
+(Deve demorar um tempinho para todos os artigos serem extraídos e armazenados, você será avisado quando acabar!)
 
 Para acessar a api para checar os artigos no banco de dados:
 
