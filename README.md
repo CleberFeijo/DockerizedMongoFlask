@@ -31,7 +31,7 @@ Para acessar a api para checar os artigos no banco de dados:
 
     http://localhost:80/artigos
 
-Para destruir/parar a aplicação:
+Para parar a aplicação:
 
     docker-compose down
 
