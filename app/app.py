@@ -1,4 +1,5 @@
 import os
+import pymongo
 from flask import Flask, jsonify
 from flask_pymongo import PyMongo
 import pdfplumber
@@ -244,7 +245,10 @@ def extrair():
 	palavras_atualizado = att.remover_pre_titulo(palavras)
 	datab = passa_db()
 	extract = extrair_artigos()
-	extract.extrator(palavras_atualizado, i_r, datab)
+	try:
+		extract.extrator(palavras_atualizado, i_r, datab)
+	except pymongo.errors.DuplicateKeyError:
+		return jsonify(message='Os artigos já foram extraidos e salvos no banco de dados anteriormente!'), 201
 
 	return jsonify(status=True,message='Artigos Extraidos com sucesso!'), 201
 
