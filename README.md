@@ -1,37 +1,38 @@
-# Extrator de Artigos da constituição brasileira de 1988
-## Aplicação com o propósito de localizar, extrair e armazenar os artigos de leis da constituição brasileira de 1988 a partir de um PDF.
+# 1988 Brazilian constituition article extractor
 
-## Sistema desenvolvido em Python, utilizando Flask como framework web, MongoDB como banco de dados e o Docker para a disponibilização dos serviços.
+## This application has the purpose of locating, extracting and storing the brazilian constitution laws articles from a PDF.
 
-Para utilização da aplicação é necessário:
+## System developed in Python, using Flask as it's web framework, MongoDB as it's database and Docker for the services disponibilization.
 
-instalar o docker seguindo:
+To use the application you need to:
+
+Install docker with:
 
     https://docs.docker.com/engine/install/ubuntu/
 
-Depois, clonar o repositório:
+After that, you need to clone the repository:
 
     git clone git@gitlab.com:cleberfeijo/DockerizedMongoFlask.git
 
-Para iniciar a aplicação, abra o terminal no diretorio onde clonou os arquivos e use:
+To start the application, open your terminal in the directory where you cloned the files and use:
 
     docker-compose up -d
-(-d para tudo ser feito em segundo plano)
+(-d so everything runs on the background)
 
-Depois de instalado basta colocar o código no diretorio app no arquivo app.py e para acessar a api:
+After installed, you may just put the code on the app directory in the file 'app.py'. Then to access the API use:
 
     http://localhost:80
 
-Para acessar a api de extração de artigos:
+To access the articles extraction API use:
 
     http://localhost:80/extrair
-(Deve demorar um tempinho para todos os artigos serem extraídos e armazenados, você será avisado quando acabar!)
+(It may take a while to all the articles to get extracted and stored, you'll be warned when it ends!)
 
-Para acessar a api para checar os artigos no banco de dados:
+To access the articles database checking API use:
 
     http://localhost:80/artigos
 
-Para parar a aplicação:
+To stop the application use:
 
     docker-compose down
 
